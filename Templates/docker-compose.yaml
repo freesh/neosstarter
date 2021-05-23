@@ -1,0 +1,22 @@
+# NEOS DEVELOPMENT ENVIRONMENT
+#
+# For instructions how to use docker-compose, see
+# https://docs.neos.io/cms/installation-development-setup/docker-and-docker-compose-setup#docker-compose-cheat-sheet
+version: "3.5"
+services:
+  # Database
+  db:
+    image: mariadb:10.3
+    environment:
+      MYSQL_ROOT_PASSWORD: neos
+      MYSQL_DATABASE: neos
+      MYSQL_USER: neos
+      MYSQL_PASSWORD: neos
+    volumes:
+      - ./Configuration/Development/Docker/mysql.cnf:/etc/mysql/conf.d/my.cnf:cached
+      - db:/var/lib/mysql:cached
+    ports:
+      - 13306:3306
+
+volumes:
+  db:

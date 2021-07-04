@@ -1,0 +1,27 @@
+#
+# Servers
+#
+
+# dev:
+#     stage: dev
+#     hostname: ###.###.##.##
+#     port: 22
+#     user: user
+#     deploy_path: "absolute/path"
+#     homepage_url: http://...
+
+# staging:
+#     stage: staging
+#     hostname: ###.###.##.##
+#     port: 22
+#     user: user
+#     deploy_path: "absolute/path"
+#     homepage_url: http://...
+
+# live:
+#     stage: master
+#     hostname: ###.###.##.##
+#     port: 22
+#     user: user
+#     deploy_path: "absolute/path"
+#     homepage_url: http://...
